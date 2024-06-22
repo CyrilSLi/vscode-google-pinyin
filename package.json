@@ -107,134 +107,269 @@
                 "when": "google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.a",
+                "command": "google-pinyin.typing.9",
+                "key": "9",
+                "when": "google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.a",
                 "key": "a",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.b",
+                "command": "google-pinyin.typing-editor.b",
                 "key": "b",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.c",
+                "command": "google-pinyin.typing-editor.c",
                 "key": "c",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.d",
+                "command": "google-pinyin.typing-editor.d",
                 "key": "d",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.e",
+                "command": "google-pinyin.typing-editor.e",
                 "key": "e",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.f",
+                "command": "google-pinyin.typing-editor.f",
                 "key": "f",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.g",
+                "command": "google-pinyin.typing-editor.g",
                 "key": "g",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.h",
+                "command": "google-pinyin.typing-editor.h",
                 "key": "h",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.i",
+                "command": "google-pinyin.typing-editor.i",
                 "key": "i",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.j",
+                "command": "google-pinyin.typing-editor.j",
                 "key": "j",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.k",
+                "command": "google-pinyin.typing-editor.k",
                 "key": "k",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.l",
+                "command": "google-pinyin.typing-editor.l",
                 "key": "l",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.m",
+                "command": "google-pinyin.typing-editor.m",
                 "key": "m",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.n",
+                "command": "google-pinyin.typing-editor.n",
                 "key": "n",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.o",
+                "command": "google-pinyin.typing-editor.o",
                 "key": "o",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.p",
+                "command": "google-pinyin.typing-editor.p",
                 "key": "p",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.q",
+                "command": "google-pinyin.typing-editor.q",
                 "key": "q",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.r",
+                "command": "google-pinyin.typing-editor.r",
                 "key": "r",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.s",
+                "command": "google-pinyin.typing-editor.s",
                 "key": "s",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.t",
+                "command": "google-pinyin.typing-editor.t",
                 "key": "t",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.u",
+                "command": "google-pinyin.typing-editor.u",
                 "key": "u",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.v",
+                "command": "google-pinyin.typing-editor.v",
                 "key": "v",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.w",
+                "command": "google-pinyin.typing-editor.w",
                 "key": "w",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.x",
+                "command": "google-pinyin.typing-editor.x",
                 "key": "x",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.y",
+                "command": "google-pinyin.typing-editor.y",
                 "key": "y",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
-                "command": "google-pinyin.typing.z",
+                "command": "google-pinyin.typing-editor.z",
                 "key": "z",
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.a",
+                "key": "a",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.b",
+                "key": "b",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.c",
+                "key": "c",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.d",
+                "key": "d",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.e",
+                "key": "e",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.f",
+                "key": "f",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.g",
+                "key": "g",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.h",
+                "key": "h",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.i",
+                "key": "i",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.j",
+                "key": "j",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.k",
+                "key": "k",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.l",
+                "key": "l",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.m",
+                "key": "m",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.n",
+                "key": "n",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.o",
+                "key": "o",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.p",
+                "key": "p",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.q",
+                "key": "q",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.r",
+                "key": "r",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.s",
+                "key": "s",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.t",
+                "key": "t",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.u",
+                "key": "u",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.v",
+                "key": "v",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.w",
+                "key": "w",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.x",
+                "key": "x",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.y",
+                "key": "y",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.z",
+                "key": "z",
+                "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
             }
         ]
     },
@@ -253,7 +388,7 @@
         "glob": "^7.1.4",
         "mocha": "^6.2.0",
         "tslint": "^5.12.1",
-        "typescript": "^3.5.3",
+        "typescript": "^3.9.10",
         "vscode-test": "^1.2.0"
     }
 }

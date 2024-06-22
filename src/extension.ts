@@ -40,12 +40,17 @@ export function activate(context: vscode.ExtensionContext) {
 
 	for (let i = 0; i < 26; i += 1) {
 		const ch = String.fromCharCode('a'.charCodeAt(0) + i);
-		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing.' + ch, () => {
+		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing-terminal.' + ch, () => {
+			pinyin_state.focus = "terminal";
+			pinyin_state.typing(ch);
+		}));
+		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing-editor.' + ch, () => {
+			pinyin_state.focus = "editor";
 			pinyin_state.typing(ch);
 		}));
 	}
 
-	for (let i = 1; i <= 8; i += 1) {
+	for (let i = 1; i <= 9; i += 1) {
 		const ch = String.fromCharCode('0'.charCodeAt(0) + i);
 		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing.' + ch, () => {
 			pinyin_state.typingNum(i);
@@ -62,6 +67,7 @@ class PinyinState {
 	index_updated = 0;
 	index = 0;
 	page = 0;
+	focus = "";
 	constructor(readonly cloudPinyin: cloud.CloudPinyin) {
 		this.quickPick.matchOnDetail = true;
 		this.quickPick.onDidChangeValue(() => this.onDidChangeValue());
@@ -118,7 +124,7 @@ class PinyinState {
 		const my_index = this.index;
 
 
-		const item_count = (this.page + 1) * 8;
+		const item_count = (this.page + 1) * 9;
 		const value = this.quickPick.value;
 		const result = await this.cloudPinyin.search(this.quickPick.value, item_count);
 		if (!result) {
@@ -131,7 +137,7 @@ class PinyinState {
 		}
 		this.index_updated = my_index;
 		this.quickPick.items = result
-			.slice(this.page * 8, (this.page + 1) * 8)
+			.slice(this.page * 9, (this.page + 1) * 9)
 			.filter(v => !v.hanzi.toLowerCase().includes(value))
 			.map((v, i) =>
 				({ label: `${i + 1}: ${v.hanzi}`, alwaysShow: true, result: v })
@@ -155,14 +161,14 @@ class PinyinState {
 	}
 
 	inputUnsolved() {
-		editorInsert(this.quickPick.value);
+		editorInsert(this.quickPick.value, this.focus);
 		this.quickPick.value = "";
 		this.quickPick.hide();
 	}
 
 
 	accept(item: MyQuickPickItem) {
-		editorInsert(item.result.hanzi);
+		editorInsert(item.result.hanzi, this.focus);
 		this.quickPick.value = this.quickPick.value.substr(item.result.matchedLength);
 		this.onDidChangeValue();
 	}
@@ -180,18 +186,20 @@ class PinyinState {
 	}
 }
 
-const editorInsert = (text: string) => {
-	let editor = vscode.window.activeTextEditor;
-	if (!editor) {
-		return;
+const editorInsert = (text: string, focus: string) => {
+	if (focus == "terminal" && vscode.window.activeTerminal) {
+		const terminal = vscode.window.activeTerminal;
+		terminal.sendText(text, false);
+	} else if (focus == "editor" && vscode.window.activeTextEditor) {
+		const editor = vscode.window.activeTextEditor;
+		const position = editor.selections[0].anchor;
+		editor.edit(editBuilder => {
+			editBuilder.insert(
+				position, text
+			);
+		});
 	}
-	const position = editor.selections[0].anchor;
-	editor.edit(editBuilder => {
-		editBuilder.insert(
-			position, text
-		);
-	});
-	vscode.commands.executeCommand('editor.action.triggerSuggest')
+	// vscode.commands.executeCommand('editor.action.triggerSuggest')workbench.action.focusActiveEditorGroup"));
 };
 
 
