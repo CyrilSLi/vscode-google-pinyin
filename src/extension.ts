@@ -20,6 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 		if (!enabled) {
 			pinyin_state.hide();
 		}
+		vscode.window.showInformationMessage(`google-pinyin ${enabled ? "enabled" : "disabled"}`);
 	}));
 
 	context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.pagenext', () => {
