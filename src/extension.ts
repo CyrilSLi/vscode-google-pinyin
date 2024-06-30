@@ -200,7 +200,8 @@ const editorInsert = (text: string, focus: string) => {
 			);
 		});
 	}
-	// vscode.commands.executeCommand('editor.action.triggerSuggest')workbench.action.focusActiveEditorGroup"));
+	vscode.commands.executeCommand('editor.action.inlineSuggest.trigger');
+	// vscode.commands.executeCommand('editor.action.triggerSuggest')
 };
 
 
