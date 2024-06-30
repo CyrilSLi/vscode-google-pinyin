@@ -195,6 +195,10 @@ const editorInsert = (text: string, focus: string) => {
 		const editor = vscode.window.activeTextEditor;
 		const position = editor.selections[0].anchor;
 		editor.edit(editBuilder => {
+			if (editor.selections.length === 1 && !editor.selections[0].isEmpty) {
+				editBuilder.delete(editor.selections[0]);
+				editor.selection = new vscode.Selection(editor.selections[0].end, editor.selections[0].end);
+			}
 			editBuilder.insert(
 				position, text
 			);
