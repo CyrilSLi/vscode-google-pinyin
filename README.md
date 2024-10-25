@@ -14,6 +14,7 @@ To enable pinyin input in the integrated terminal, add the following values to "
 ```json
 "terminal.integrated.commandsToSkipShell": [
     "google-pinyin.toggle",
+    "google-pinyin.width",
     "google-pinyin.typing-terminal.a",
     "google-pinyin.typing-terminal.b",
     "google-pinyin.typing-terminal.c",
@@ -39,6 +40,21 @@ To enable pinyin input in the integrated terminal, add the following values to "
     "google-pinyin.typing-terminal.w",
     "google-pinyin.typing-terminal.x",
     "google-pinyin.typing-terminal.y",
-    "google-pinyin.typing-terminal.z"
+    "google-pinyin.typing-terminal.z",
+    "google-pinyin.typing-terminal.comma",
+    "google-pinyin.typing-terminal.period",
+    "google-pinyin.typing-terminal.enumperiod",
+    "google-pinyin.typing-terminal.exclamation",
+    "google-pinyin.typing-terminal.question",
+    "google-pinyin.typing-terminal.colon",
+    "google-pinyin.typing-terminal.semicolon",
+    "google-pinyin.typing-terminal.lparen",
+    "google-pinyin.typing-terminal.rparen",
+    "google-pinyin.typing-terminal.lbracket",
+    "google-pinyin.typing-terminal.rbracket",
+    "google-pinyin.typing-terminal.lbrace",
+    "google-pinyin.typing-terminal.rbrace",
+    "google-pinyin.typing-terminal.langle",
+    "google-pinyin.typing-terminal.rangle"
 ]
 ```

@@ -5,8 +5,19 @@ import { window } from 'vscode';
 
 import * as cloud from './clound';
 
+let statusIcon: vscode.StatusBarItem;
+let punc_init = true;
 
 export function activate(context: vscode.ExtensionContext) {
+	statusIcon = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+	width();
+	punc_init = false;
+	statusIcon.command = "google-pinyin.width";
+	context.subscriptions.push(statusIcon);
+	context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.width', () => {
+		width()
+	}));
+
 	const cloudPinyin = new cloud.CloudPinyin();
 
 	const pinyin_state = new PinyinState(cloudPinyin);
@@ -19,6 +30,9 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.executeCommand("setContext", "google-pinyin.selecting", false);
 		if (!enabled) {
 			pinyin_state.hide();
+			statusIcon.hide();
+		} else {
+			statusIcon.show();
 		}
 		vscode.window.showInformationMessage(`google-pinyin ${enabled ? "enabled" : "disabled"}`);
 	}));
@@ -58,6 +72,33 @@ export function activate(context: vscode.ExtensionContext) {
 		}));
 	}
 
+	const punc_full = String.raw`，。、！？：；（）【】｛｝《》`;
+	const punc_keys = ["comma", "period", "enumperiod", "exclamation", "question", "colon", "semicolon",
+		"lparen", "rparen", "lbracket", "rbracket", "lbrace", "rbrace", "langle", "rangle"]
+		.map((v, i) => [v, punc_full[i]]);
+	for (const [key, ch] of punc_keys) {
+		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing-terminal.' + key, () => {
+			editorInsert(ch, "terminal");
+		}));
+		context.subscriptions.push(vscode.commands.registerCommand('google-pinyin.typing-editor.' + key, () => {
+			editorInsert(ch, "editor");
+		}));
+	}
+}
+
+export function width() {
+	if (statusIcon.text === "半") {
+		statusIcon.text = "全";
+		statusIcon.tooltip = "full-width punctuation\n全角符号";
+		vscode.commands.executeCommand("setContext", "google-pinyin.full-width", true);
+	} else {
+		statusIcon.text = "半";
+		statusIcon.tooltip = "half-width punctuation\n半角符号";
+		vscode.commands.executeCommand("setContext", "google-pinyin.full-width", false);
+	}
+	if (!punc_init) { // Will not run during activation
+		vscode.window.showInformationMessage(`google-pinyin ${statusIcon.text}角符号`);
+	}
 }
 
 type MyQuickPickItem = vscode.QuickPickItem

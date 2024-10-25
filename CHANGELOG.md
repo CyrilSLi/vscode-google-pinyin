@@ -4,6 +4,13 @@ All notable changes to the "google-pinyin" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.1.7 - 2024-10-24
+
+### Added
+
+- Add ability to switch between half-width and full-width punctuation
+- New status bar icon shows the current punctuation mode
+
 ## 0.1.6 - 2024-06-23
 
 ### Added

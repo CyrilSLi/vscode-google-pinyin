@@ -7,7 +7,7 @@
     },
     "displayName": "google-pinyin",
     "description": "Input Chinese with online google input tools",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "engines": {
         "vscode": "^1.36.0"
     },
@@ -24,12 +24,21 @@
             {
                 "command": "google-pinyin.toggle",
                 "title": "Toogle Google Pinyin"
+            },
+            {
+                "command": "google-pinyin.width",
+                "title": "Toggle Punctuation Width"
             }
         ],
         "keybindings": [
             {
                 "command": "google-pinyin.toggle",
                 "key": "ctrl+space"
+            },
+            {
+                "command": "google-pinyin.width",
+                "key": "ctrl+shift+space",
+                "when": "google-pinyin.enabled"
             },
             {
                 "command": "google-pinyin.accept.seleted",
@@ -242,6 +251,81 @@
                 "when": "editorTextFocus && google-pinyin.enabled && !google-pinyin.seleting"
             },
             {
+                "command": "google-pinyin.typing-editor.comma",
+                "key": ",",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.period",
+                "key": ".",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.enumperiod",
+                "key": "\\",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.exclamation",
+                "key": "shift+1",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.question",
+                "key": "shift+/",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.colon",
+                "key": "shift+;",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.semicolon",
+                "key": ";",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.lparen",
+                "key": "shift+9",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.rparen",
+                "key": "shift+0",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.lbracket",
+                "key": "[",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.rbracket",
+                "key": "]",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.lbrace",
+                "key": "shift+[",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.rbrace",
+                "key": "shift+]",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.langle",
+                "key": "shift+,",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-editor.rangle",
+                "key": "shift+.",
+                "when": "editorTextFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
                 "command": "google-pinyin.typing-terminal.a",
                 "key": "a",
                 "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
@@ -370,6 +454,81 @@
                 "command": "google-pinyin.typing-terminal.z",
                 "key": "z",
                 "when": "terminalFocus && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.comma",
+                "key": ",",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.period",
+                "key": ".",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.enumperiod",
+                "key": "\\",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.exclamation",
+                "key": "shift+1",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.question",
+                "key": "shift+/",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.colon",
+                "key": "shift+;",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.semicolon",
+                "key": ";",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.lparen",
+                "key": "shift+9",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.rparen",
+                "key": "shift+0",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.lbracket",
+                "key": "[",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.rbracket",
+                "key": "]",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.lbrace",
+                "key": "shift+[",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.rbrace",
+                "key": "shift+]",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.langle",
+                "key": "shift+,",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
+            },
+            {
+                "command": "google-pinyin.typing-terminal.rangle",
+                "key": "shift+.",
+                "when": "terminalFocus && google-pinyin.full-width && google-pinyin.enabled && !google-pinyin.seleting"
             }
         ]
     },
